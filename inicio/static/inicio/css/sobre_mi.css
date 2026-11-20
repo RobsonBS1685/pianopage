@@ -1,0 +1,120 @@
+@import url('./style.css');
+
+.pagina-sobre { min-height: 100vh; }
+.pagina-sobre main { flex: 1; display: flex; flex-direction: column; }
+.sobre-header {
+    min-height: 82px;
+    padding: 0 max(4.5%, calc((100% - 1600px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    background: #292722;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+}
+.sobre-logo { font-size: 18px; }
+.sobre-nav a { position: relative; padding: 12px 0; }
+.sobre-nav a.activo::after, .sobre-nav a:hover::after { display: none; }
+.sobre-hero {
+    flex: 1;
+    position: relative;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #d9cbb8;
+}
+.sobre-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url('../img/sobre-mi-piano-jardin-sin-atril.png');
+    background-position: right 60%;
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    filter: saturate(.72) brightness(1.07) sepia(.08);
+}
+.sobre-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(245,242,236,.98) 0%, rgba(245,242,236,.94) 30%, rgba(245,242,236,.72) 43%, rgba(245,242,236,.30) 59%, rgba(245,242,236,.16) 100%);
+}
+.sobre-inner {
+    position: relative;
+    z-index: 2;
+    width: min(91%, 760px);
+    margin: 0 auto 0 max(4.5%, calc((100% - 1480px) / 2));
+    padding: 72px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.sobre-imagen {
+    width: 100%;
+    max-width: 340px;
+    height: 250px;
+    justify-self: center;
+    overflow: hidden;
+    border: 5px solid rgba(255,255,255,.72);
+    box-shadow: 0 18px 45px rgba(35,29,20,.2);
+    order: 0;
+}
+.sobre-imagen img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; filter: saturate(.85) brightness(1.02) sepia(.05); }
+.sobre-info { width: 100%; max-width: 760px; min-width: 0; order: 1; }
+.sobre-etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+    color: #77512f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+.sobre-etiqueta span { width: 48px; height: 1px; background: var(--gold); }
+.sobre-info h1 { margin: 0; color: var(--ink); font: 400 clamp(42px, 5vw, 64px)/1.12 Georgia, 'Times New Roman', serif; letter-spacing: -1.3px; }
+.sobre-info h2 { margin: 14px 0 25px; color: #77512f; font: italic 400 clamp(20px, 2vw, 25px)/1.4 Georgia, 'Times New Roman', serif; }
+.sobre-info p { max-width: 570px; margin: 0 0 15px; color: #38352f; font-size: 16px; line-height: 1.8; }
+.sobre-boton { margin-top: 14px; }
+.sobre-invitacion {
+    min-height: 290px;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #292722;
+    color: #f7f4ee;
+}
+.sobre-invitacion > span { margin-bottom: 14px; color: #d3b58f; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+.sobre-invitacion h2 { margin-bottom: 10px; }
+.sobre-invitacion p { margin: 0 0 24px; color: #dedbd4; font-size: 15px; line-height: 1.6; }
+.sobre-contactar { min-width: 160px; }
+@media (min-width: 761px) and (max-width: 1100px) {
+    .sobre-info h1 { font-size: clamp(36px, 4.2vw, 50px); }
+    .sobre-info h2 { font-size: clamp(19px, 2.4vw, 23px); }
+}
+@media (max-width: 760px) {
+    .sobre-header { min-height: 94px; padding: 14px 5%; flex-direction: column; justify-content: center; gap: 8px; }
+    .sobre-logo { font-size: 16px; }
+    .sobre-nav a { font-size: 13px; }
+    .sobre-hero { min-height: 0; }
+    .sobre-hero::before { background-position: right 60%; background-size: 70% auto; }
+    .sobre-overlay { background: linear-gradient(90deg, rgba(245,242,236,.97) 0%, rgba(245,242,236,.9) 55%, rgba(245,242,236,.48) 100%); }
+    .sobre-inner { width: min(88%, 760px); margin: 0 auto; padding: 44px 0 52px; display: flex; flex-direction: column; align-items: flex-start; gap: 26px; }
+    .sobre-imagen { order: 0; max-width: min(100%, 340px); height: clamp(180px, 55vw, 250px); }
+    .sobre-info { order: 1; }
+    .sobre-info h1 { font-size: clamp(38px, 9vw, 52px); }
+    .sobre-info p { font-size: 15px; }
+    .sobre-invitacion { min-height: 260px; }
+    .sobre-invitacion h2 { font-size: 29px; }
+}
+@media (max-width: 380px) {
+    .sobre-nav { gap: 18px; }
+    .sobre-nav a { font-size: 12px; }
+    .sobre-logo { font-size: 14px; }
+}

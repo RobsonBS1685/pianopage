@@ -1,0 +1,111 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Conoce a Robinson Barriga, pianista y profesor de piano en Santiago de Chile.">
+    <title>Sobre mí | Robinson Barriga</title>
+
+    <link rel="stylesheet" href="{% static 'inicio/css/sobre_mi.css' %}?v=20">
+</head>
+
+<body class="pagina-sobre">
+
+    <!-- NAVEGACIÓN -->
+    <header class="sobre-header">
+
+        <a href="{% url 'home' %}" class="sobre-logo">
+            ROBINSON BARRIGA
+        </a>
+
+        <nav class="sobre-nav" aria-label="Navegación principal">
+            <a href="{% url 'home' %}">Inicio</a>
+
+            <a href="{% url 'sobre_mi' %}" class="activo">
+                Sobre mí
+            </a>
+
+            <a href="{% url 'contacto' %}">
+                Contacto
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- PRESENTACIÓN -->
+    <main>
+
+        <section class="sobre-hero">
+
+            <div class="sobre-overlay"></div>
+
+            <div class="sobre-inner">
+
+                <!-- TEXTO -->
+                <div class="sobre-info">
+
+                    <div class="sobre-etiqueta">
+                        SOBRE MÍ
+                        <span></span>
+                    </div>
+
+                    <h1>Robinson Barriga</h1>
+
+                    <h2>Pianista y profesor de piano</h2>
+
+                    <p>
+                        Disfruto compartir la música y enseñar a descubrir
+                        el piano como una forma de expresión y creatividad.
+                    </p>
+
+                    <p>
+                        En mis clases busco combinar técnica, sensibilidad
+                        y expresión musical, respetando el ritmo de
+                        aprendizaje de cada alumno.
+                    </p>
+
+                    <a href="{% url 'contacto' %}"
+                       class="sobre-boton">
+                        CONOCE MIS CLASES
+                    </a>
+
+                </div>
+
+
+                <!-- FOTOGRAFÍA -->
+                <div class="sobre-imagen">
+
+                    <img
+                        src="{% static 'inicio/img/robinson.jpg' %}"
+                        alt="Robinson Barriga junto al piano"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INVITACIÓN -->
+        <section class="sobre-invitacion">
+
+            <span>CLASES PARTICULARES DE PIANO</span>
+
+            <h2>Comencemos a tocar.</h2>
+
+            <a href="{% url 'contacto' %}"
+               class="sobre-contactar">
+                CONTACTAR
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

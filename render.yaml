@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pianopage
+    runtime: python
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: gunicorn clpiano.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
