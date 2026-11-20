@@ -106,6 +106,7 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # Correo electrónico
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
 EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
+EMAIL_TIMEOUT = 10
 EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
