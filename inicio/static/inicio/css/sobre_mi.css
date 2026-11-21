@@ -103,8 +103,8 @@
     .sobre-logo { font-size: 16px; }
     .sobre-nav a { font-size: 13px; }
     .sobre-hero { min-height: 0; }
-    .sobre-hero::before { background-position: center 60%; background-size: cover; }
-    .sobre-overlay { background: linear-gradient(90deg, rgba(245,242,236,.93) 0%, rgba(245,242,236,.82) 48%, rgba(245,242,236,.28) 100%); }
+    .sobre-hero::before { background-position: center; background-size: contain; }
+    .sobre-overlay { background: linear-gradient(90deg, rgba(245,242,236,.86) 0%, rgba(245,242,236,.70) 48%, rgba(245,242,236,.16) 100%); }
     .sobre-inner { width: min(88%, 620px); margin: 0 auto; padding: 44px 0 52px; gap: 26px; }
     .sobre-imagen { width: 100%; max-width: min(100%, 340px); height: clamp(180px, 55vw, 250px); }
     .sobre-info h1 { font-size: clamp(38px, 9vw, 52px); }
