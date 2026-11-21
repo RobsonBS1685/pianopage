@@ -69,8 +69,8 @@
 }
 .contact-submit:hover { border-color: #8a623a; background: #8a623a; }
 @media (max-width: 760px) {
-    .contact-main { padding: 28px 5%; background-position: center, center; background-size: 100% 100%, contain; background-image: linear-gradient(rgba(245, 242, 236, .01), rgba(245, 242, 236, .01)), url('../img/contacto-piano-estudio-claro.png'); }
-    .contact-card { grid-template-columns: 1fr; background: rgba(255, 253, 250, .46); }
+    .contact-main { padding: 28px 5%; background-position: center, center 55%; background-size: 100% 100%, cover; background-image: linear-gradient(rgba(245, 242, 236, .03), rgba(245, 242, 236, .03)), url('../img/contacto-piano-estudio-claro.png'); }
+    .contact-card { grid-template-columns: 1fr; background: rgba(255, 253, 250, .58); }
     .contact-intro { padding: 30px 26px; }
     .contact-intro h1 { font-size: 38px; }
     .contact-intro p { font-size: 15px; }
